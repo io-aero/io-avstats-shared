@@ -1,0 +1,79 @@
+copyright: Copyright &copy;2022, IO-Aero.
+
+edit_uri: ""
+
+extra:
+  generator: false
+extra_css:
+  - assets/pymdownx-extras/extra-b1466b3f51.css
+extra_javascript:
+  - https://unpkg.com/mermaid@8.13.3/dist/mermaid.min.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - assets/pymdownx-extras/extra-loader-9e2c67b9.js
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tilde
+  - toc : {
+    toc_depth: "1-3"
+  }
+
+nav:
+  - Home: index.md
+  - Applications:
+      - ae1982: app_ae1982.md
+      - pd1982: app_pd1982.md
+      - Release Notes: io_avstats_release_notes.md
+      - Release History: io_avstats_release_history.md
+      - Update Log Files:
+          - 2023.02.01: update_log_2023_02_01.md
+          - 2023.01.22: update_log_2023_01_22.md
+  - Database:
+      - Data Sources: db_sources.md
+      - Data Dictionary: db_dictionary.md
+      - Data Updatew: db_update.md
+      - Release Notes: io_avstats_db_release_notes.md
+      - Release History: io_avstats_db_release_history.md
+  - License: LICENSE.md
+
+plugins:
+  - autorefs
+  - awesome-pages
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          options:
+            heading_level: 3
+            paths: [src/io_avstats]
+            show_root_heading: false
+            show_source: true
+  - search
+
+repo_name: GitHub
+repo_url: https://github.com/io-aero/io-avstats-shared
+
+site_name: IO-AVSTATS - Aviation Event Statistics
+site_url: https://io-aero.com/
+site_description: Aviation Event Statistics
+site_author: IO-Aero Team
+
+theme:
+  favicon: img/IO-Aero Logo.png
+  features:
+    - search.highlight
+    - search.suggest
+  language: en
+  logo: img/IO-Aero Logo.png
+  name: material
+  palette:
+    primary: blue
+    accent: red
+
+use_directory_urls: false
