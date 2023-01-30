@@ -2,7 +2,7 @@
 
 Repository for the freely available elements of the **IO-Aero** products **IO-AVSTATS** and **IO-AVSTATS-DB**.
 
-By far the most important part is the user manual for IO-AVSTATS and IO-AVSTATS which can be found [here](https://io-aero.github.io/io-avstats-shared/).
+By far the most important part is the user manual for **IO-AVSTATS** and **IO-AVSTATS** which can be found [**here**](https://io-aero.github.io/io-avstats-shared/).
 
 ## Directory and File Structure of this Repository
 
