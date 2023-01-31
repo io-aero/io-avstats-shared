@@ -37,7 +37,7 @@ nav:
   - Database:
       - Data Sources: db_sources.md
       - Data Dictionary: db_dictionary.md
-      - Data Updatew: db_update.md
+      - Data Update: db_update.md
       - Release Notes: io_avstats_db_release_notes.md
       - Release History: io_avstats_db_release_history.md
   - License: LICENSE.md
