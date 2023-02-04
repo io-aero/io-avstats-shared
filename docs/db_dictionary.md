@@ -275,21 +275,31 @@ regis_nos                    |{N6763,N7227C}     |
 
 - `events.ev_highest_injury`
 - `events.ev_id`
-- `events.ev_month`
+~~- `events.ev_month`~~
 - `events.ev_type`
 - `events.ev_year`
 - `events.inj_f_grnd`
 - `events.inj_tot_f`
-- `events.lat_lng_acq`
+- `events.io_dec_latitude_deviating`
+- `events.io_dec_longitude_deviating`
+- `events.io_invalid_latitude`
+- `events.io_invalid_longitude`
+- `events.io_invalid_us_city`
+- `events.io_invalid_us_city_zip_code`
+- `events.io_invalid_us_state`
+- `events.io_invalid_us_zipcode`
 - `events.ntsb_no`
 
 #### Original Data - with Conditions
 
-- `events.ev_dow` - capital letters
+~~- `events.ev_dow` - capital letters~~
 - `events.io_city` - if empty `events.ev_city`
 - `events.io_country` - if empty `events.ev_country`
 - `events.io_dec_latitude` - if empty `events.ev_dec_latitude`
 - `events.io_dec_longitude` - if empty `events.ev_dec_longitude`
+- `events.io_latlong_acq` 
+    - 'NONE' if NOT `events.io_latlong_acq` AND NOT `events.latlong_acq` AND (ONE OF `events.dec_latitude`, `events.dec_longitude`, `events.dec_latitude` or `events.io_dec_longitude`) 
+    - `events.io_latlong_acq` - if empty `events.latlong_acq` - if empty 'NRE'
 - `events.io_site_zipcode` - if empty `events.ev_site_zipcodey`
 - `events.io_state` - if empty `events.ev_state`
 
@@ -298,15 +308,15 @@ regis_nos                    |{N6763,N7227C}     |
 ##### Level Base
 
 - `acft_categories` - an array of `aircraft.acft_categoriy`
-- `all_defining_occurrence_codes` - an array of `events_sequence.occurrence_code` where
-    - `events_sequence.defining_ev` is true 
-- `all_finding_codes` - an array of `findings.finding_code` 
-- `all_occurrence_codes` - an array of `events_sequence.occurrence_code` 
+~~- `all_defining_occurrence_codes` - an array of `events_sequence.occurrence_code` where~~
+    ~~- `events_sequence.defining_ev` is true~~
+~~- `all_finding_codes` - an array of `findings.finding_code`~~
+~~- `all_occurrence_codes` - an array of `events_sequence.occurrence_code`~~
 - `cictt_codes` - an array of `io_aviation_occurrence_categories.cictt_code` where
     - `io_sequence_of_events.soe_no` in `events_sequence` where
         - `events_sequence.defining_ev` is true 
-- `dest_countries` - an array of `aircraft.dest_country`
-- `dprt_countries` - an array of `aircraft.dprt_country`
+~~- `dest_countries` - an array of `aircraft.dest_country`~~
+~~- `dprt_countries` - an array of `aircraft.dprt_country`~~
 - `far_parts` - an array of `aircraft.far_part`
 - `finding_codes` - an array of transcoded `findings.finding_code`
     - `findings.finding_code` = `01062012` results in `PARAMS_ALT`, 
@@ -341,14 +351,14 @@ regis_nos                    |{N6763,N7227C}     |
     - `events_sequence.occurrence_code` like `xxx401` results in `UIMC`, 
     - `events_sequence.occurrence_code` like `xxx420` results in `CAA`, 
     - `events_sequence.occurrence_code` like `xxx901` results in `BIRD`, 
-- `oper_countries` - an array of `aircraft.oper_country`
-- `owner_countries` - an array of `aircraft.owner_country`
-- `regis_countries` - an array of transcoded `aircraft.regis_no`
-    - `aircraft.regis_no` like `N[1-9][0-9][0-9][0-9][0-9]` results in `USA`, 
-    - `aircraft.regis_no` like `N[1-9][0-9][0-9][0-9][A-Z]` results in `USA`, 
-    - `aircraft.regis_no` like `N[1-9][0-9][0-9][A-Z][A-Z]` results in `USA`, 
-    - `NON-US` else
-- `regis_nos` - an array of `aircraft.regis_no`
+~~- `oper_countries` - an array of `aircraft.oper_country`
+~~- `owner_countries` - an array of `aircraft.owner_country`~~
+~~- `regis_countries` - an array of transcoded `aircraft.regis_no`~~
+~~    - `aircraft.regis_no` like `N[1-9][0-9][0-9][0-9][0-9]` results in `USA`,~~
+    ~~- `aircraft.regis_no` like `N[1-9][0-9][0-9][0-9][A-Z]` results in `USA`,~~
+    ~~- `aircraft.regis_no` like `N[1-9][0-9][0-9][A-Z][A-Z]` results in `USA`,~~
+    ~~- `NON-US` else~~
+~~- `regis_nos` - an array of `aircraft.regis_no`~~
 
 ##### Level 1
 
@@ -370,9 +380,9 @@ regis_nos                    |{N6763,N7227C}     |
 - `is_owner_country_usa` - `True` if `owner_countries` contains `USA`
 - `is_regis_country_usa` - `True` if `regis_countries` contains `USA`
 - `is_spin_stall` - `True` if
-    - `finding_codes` contains `PARAMS_AoA`,                       or
-    - `occurrence_codes`contains `STALL`                           or
-    - `occurrence_codes`contains `LOC-I` and `narr_stall`is `True` and not
+    - (`finding_codes` contains `PARAMS_AoA`,                        or
+    -  `occurrence_codes`contains `STALL`                            or
+    -  `occurrence_codes`contains `LOC-I` and `narr_stall`is `True`) and not
     - `occurrence_codes`contains `CAA` or `CFIT` 
 
 ##### Level 2
