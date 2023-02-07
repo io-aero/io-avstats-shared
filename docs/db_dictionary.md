@@ -362,6 +362,12 @@ regis_nos                    |{N6763,N7227C}     |
 
 ##### Level 1
 
+                                               CASE WHEN level_1.cictt_codes::text[] = ARRAY[]::text[] THEN (ARRAY['n/a'])
+                                                                                                       ELSE level_1.cictt_codes      
+                                                END cictt_codes,
+
+
+- `cictt_codes` - ARRAY['n/a'] if empty 
 - `is_dest_country_usa` - `True` if `dest_countries` contains `USA`
 - `is_dprt_country_usa` - `True` if `dprt_countries` contains `USA`
 - `is_emergency_landing` - `True` if
@@ -373,10 +379,11 @@ regis_nos                    |{N6763,N7227C}     |
         - `events_sequence.occurrence_code` in (`xxx133`, `xxx133`, `xxx133`, `xxx133`, `xxx133`, `xxx133`, `xxx133`, `xxx133`, `xxx133`, `xxx133`, `xxx133`, `xxx133`, `xxx133`, `xxx133`, )
         - `events_sequence.occurrence_code` in (`xxx337`, `xxx338`) and
         - `events_sequence.defining_ev` is true 
-- `is_far_part_091x` - `True` if `far_parts` contains at least one of `091`, `091F` or `091K` 
-- `is_far_part_121` - `True` if `far_parts` contains at least one `121` 
-- `is_far_part_135` - `True` if `far_parts` contains at least one `135` 
-- `is_oper_country_usa` - `True` if `oper_countries` contains `USA`
+- `is_far_part_091x`     - `True` if `far_parts` contains at least one of `091`, `091F` or `091K` 
+- `is_far_part_121`      - `True` if `far_parts` contains at least one `121` 
+- `is_far_part_135`      - `True` if `far_parts` contains at least one `135` 
+- `is_far_part_other`    - `True` if `far_parts` contains none of  `091`, `091F` or `091K`, `121`, `135` 
+- `is_oper_country_usa`  - `True` if `oper_countries` contains `USA`
 - `is_owner_country_usa` - `True` if `owner_countries` contains `USA`
 - `is_regis_country_usa` - `True` if `regis_countries` contains `USA`
 - `is_spin_stall` - `True` if
@@ -389,8 +396,8 @@ regis_nos                    |{N6763,N7227C}     |
 
 - `is_altitude_controllable` - `True` if
     - `is_atttitude_controllable` is `True` and 
-    - `is_emergency_landing` is `True` and not
-    - `is_spin_stall` is `True`
+    - `is_emergency_landing`      is `True` and not
+    - `is_spin_stall`             is `True`
 - `is_altitude_low` - `True` if
     - `spin_stall` is `False`                      and 
     - `occurrence_codes` does not contain `MIDAIR` and
@@ -412,14 +419,32 @@ regis_nos                    |{N6763,N7227C}     |
 
 - `is_rss_forced_landing` - `True` if
     - `is_altitude_controllable` is `True` and 
-    - `is_emergency_landing`
+    - `is_emergency_landing`     is `True`
 - `is_rss_spin_stall_prevention_and_recovery` - `True` if
     - `is_attitude_controllable` is `True` and 
-    - `is_spin_stall` is `True`
+    - `is_spin_stall`            is `True`
 - `is_rss_terrain_collision_avoidance` - `True` if
     - `is_altitude_controllable` is `True` and 
-    - `is_altitude_low` is `True` and 
-    - `is_attitude_controllable`
+    - `is_altitude_low`          is `True` and 
+    - `is_attitude_controllable` is `True`
+
+##### Level 4
+
+- `is_lp_n_a` - `True` if
+    - `is_altitude_low`                           is `False` and 
+    - `is_attitude_controllable`                  is `False` and 
+    - `is_emergency_landing`                      is `False` and 
+    - `is_midair_collision`                       is `False` and 
+    - `is_pilot_issue`                            is `False` and 
+    - `is_rss_forced_landing`                     is `False` and 
+    - `is_rss_spin_stall_prevention_and_recovery` is `False` and 
+    - `is_rss_terrain_collision_avoidance`        is `False` and 
+    - `is_spin_stall`                             is `False` 
+- `is_rss_n_a` - `True` if
+    - `is_midair_collision`                       is `False` and 
+    - `is_rss_forced_landing`                     is `False` and 
+    - `is_rss_spin_stall_prevention_and_recovery` is `False` and 
+    - `is_rss_terrain_collision_avoidance`        is `False` 
 
 ### 4.2 `io_lat_long_issues`
 

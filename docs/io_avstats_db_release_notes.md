@@ -2,7 +2,7 @@
 
 ## Version 1.4.0 
 
-Release Date: dd.mm.2023
+Release Date: 07.02.2023
 
 ### 1. New Features
 
@@ -10,15 +10,11 @@ Release Date: dd.mm.2023
 - Database table events: new index io_latlong_acq
 - Database view io_app_ae1982: new columns dec_lat_lng_actions, dec_latitude_deviating, dec_longitude_deviating, is_invalid_...
 
-### 2. Modified Features
-
-- TODO
-
-### 3. Deleted Features
+### 2. Deleted Features
 
 - Database table events: index latlong_acq
 
-### 4. Applied Software (Windows-specific)
+### 3. Applied Software (Windows-specific)
 
 **Important**: All software components should be installed in the 64 bit version!
 
@@ -34,6 +30,6 @@ Release Date: dd.mm.2023
 | [RazorSQL](https://razorsql.com/download_win.html){:target="_blank"}                                                               | 10.3.0    |                  |        |
 | [Visual Studio Community 2022](https://visualstudio.microsoft.com/vs){:target="_blank"}                                            | 2022      | Windows-specific |        |  
 
-#### 4.1 Minimal Requirements Visual Studio Community 2022
+#### 3.1 Minimal Requirements Visual Studio Community 2022
 
 <kbd>![](img/Visual Studio Requirements.png)</kbd>
