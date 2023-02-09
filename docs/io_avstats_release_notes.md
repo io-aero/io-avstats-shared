@@ -2,13 +2,21 @@
 
 ## Version 23.02.08
 
-Release Date: dd.mm.2023
+Release Date: 09.02.2023
 
-### 1. Modified Features
+### 1. New Features
 
-- TODO
+- bar chart & pie chart: FAR Operations Parts
+- documentation completed
+- entry options for threshold values
+- optional: column sums and / or row sums in all detailed data
+- optional: pie charts with detailed data
 
-### 2. Applied Software
+### 2. Modified Features
+
+- bar charts & pie charts: always same colors for same categories
+
+### 3. Applied Software
 
 **Important**: All software components should be installed in the 64 bit version!
 
@@ -24,12 +32,12 @@ Release Date: dd.mm.2023
 | [Python](https://www.python.org){:target="_blank"}                                                                                        | 3.10.9    |                  |        |
 | [RazorSQL](https://razorsql.com/download_win.html){:target="_blank"}                                                                      | 10.3.0    |                  |        |
 
-### 2. Processed files
+### 4. Processed files
 
-#### 2.1 [NTSB - National Transport Safety Board](https://www.ntsb.gov/Pages/home.aspx){:target="_blank"}
+#### 4.1 [NTSB - National Transport Safety Board](https://www.ntsb.gov/Pages/home.aspx){:target="_blank"}
 
 ##### Data source `up01FEB.zip`
 
 - Download link: [here](https://data.ntsb.gov/avdata/FileDirectory/DownloadFile?fileID=C%3A%5Cavdata%5Cup01FEB.zip){:target="_blank"}
-- Version: 2/1/2022 3:00:25 AM
+- Version: 2/8/2022 3:00:20 AM
 - Purpose: update of aviation accident data available for public use
