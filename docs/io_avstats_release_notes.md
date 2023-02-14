@@ -41,3 +41,11 @@ Release Date: 09.02.2023
 - Download link: [here](https://data.ntsb.gov/avdata/FileDirectory/DownloadFile?fileID=C%3A%5Cavdata%5Cup01FEB.zip){:target="_blank"}
 - Version: 2/8/2022 3:00:20 AM
 - Purpose: update of aviation accident data available for public use
+
+### 5. Upcoming Developments
+
+- Data reconciliation between the databases of NTSB and IO-Aer.
+- Completion of the user guide documentation.
+- Regrouping of the charts into "Annual Charts" and "Totals Charts".
+- Introducing interactive maps.
+- "Totals Charts": Introducing optional horizontal bar charts.

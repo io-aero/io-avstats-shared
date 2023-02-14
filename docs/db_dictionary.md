@@ -368,6 +368,7 @@ regis_nos                    |{N6763,N7227C}     |
 
 
 - `cictt_codes` - ARRAY['n/a'] if empty 
+- `far_parts` - ARRAY['n/a'] if empty 
 - `is_dest_country_usa` - `True` if `dest_countries` contains `USA`
 - `is_dprt_country_usa` - `True` if `dprt_countries` contains `USA`
 - `is_emergency_landing` - `True` if
@@ -456,47 +457,56 @@ Only original data from the relevant tables are shown here.
 Sample data:
 
 ```
-Name                      |Value                                                 |
---------------------------+------------------------------------------------------+
-ev_id                     |20030618X00903                                        |
-ev_country                |USA                                                   |
-ev_state                  |AK                                                    |
-ev_city                   |Anchorage                                             |
-ev_site_zipcode           |99515                                                 |
-ev_dec_latitude           |                                                      |
-ev_dec_longitude          |                                                      |
-ev_latitude               |610624N                                               |
-ev_longitude              |1495152W                                              |
-io_country                |                                                      |
-io_state                  |                                                      |
-io_city                   |                                                      |
-io_site_zipcode           |                                                      |
-io_dec_latitude           |61.10666666666667                                     |
-io_dec_longitude          |-149.86444444444444                                   |
-io_latitude               |                                                      |
-io_longitude              |                                                      |
-io_dec_lat_lng_actions    |INFO.00.037 Correction based on latitude and longitude|
-io_dec_latitude_deviating |                                                      |
-io_dec_longitude_deviating|                                                      |
-io_invalid_latitude       |                                                      |
-io_invalid_longitude      |                                                      |
-io_invalid_us_city        |                                                      |
-io_invalid_us_city_zipcode|                                                      |
-io_invalid_us_state       |                                                      |
-io_invalid_us_zipcode     |                                                      |
-country                   |USA                                                   |
-state                     |AK                                                    |
-city                      |Anchorage                                             |
-site_zipcode              |99515                                                 |
-latitude                  |610624N                                               |
-longitude                 |1495152W                                              |
-state_name                |Alaska                                                |
-zipcode_dec_latitude      |61.11733                                              |
-zipcode_dec_longitude     |-149.88894                                            |
-city_dec_latitude         |61.1508                                               |
-city_dec_longitude        |-149.1091                                             |
-state_dec_latitude        |63.7431630974                                         |
-state_dec_longitude       |-151.594035116                                        |
-country_dec_latitude      |37.09024                                              |
-country_dec_longitude     |-95.712891                                            |
+Name                                     |Value            |
+-----------------------------------------+-----------------+
+ev_id                                    |20221212106439   |
+ntsb_no                                  |DCA23LA093       |
+ev_type                                  |ACC              |
+ev_year                                  |2022             |
+country                                  |USA              |
+state                                    |NJ               |
+city                                     |Newark           |
+zip                                      |                 |
+acft_categories                          |{AIR,AIR}        |
+cictt_codes                              |{TURB}           |
+dec_latitude                             |40.700601        |
+dec_latitude_deviating                   |36.62782322222222|
+dec_longitude                            |-74.162973       |
+dec_longitude_deviating                  |66.33325077777778|
+ev_highest_injury                        |SERS             |
+far_parts                                |{121,129}        |
+finding_codes                            |{}               |
+inj_f_grnd                               |0                |
+inj_tot_f                                |0                |
+is_altitude_controllable                 |true             |
+is_altitude_low                          |false            |
+is_attitude_controllable                 |true             |
+is_dest_country_usa                      |false            |
+is_dprt_country_usa                      |false            |
+is_emergency_landing                     |false            |
+is_far_part_091x                         |false            |
+is_far_part_121                          |true             |
+is_far_part_135                          |false            |
+is_far_part_other                        |false            |
+is_invalid_latitude                      |false            |
+is_invalid_longitude                     |false            |
+is_invalid_us_city                       |false            |
+is_invalid_us_city_zipcode               |false            |
+is_invalid_us_state                      |false            |
+is_invalid_us_zipcode                    |false            |
+is_lp_n_a                                |false            |
+is_midair_collision                      |false            |
+is_narrative_stall                       |false            |
+is_oper_country_usa                      |true             |
+is_owner_country_usa                     |true             |
+is_pilot_issue                           |false            |
+is_regis_country_usa                     |true             |
+is_rss_forced_landing                    |false            |
+is_rss_n_a                               |false            |
+is_rss_spin_stall_prevention_and_recovery|false            |
+is_rss_terrain_collision_avoidance       |true             |
+is_spin_stall                            |false            |
+latlong_acq                              |MEAS             |
+no_aircraft                              |2                |
+occurrence_codes                         |{}               |
 ```

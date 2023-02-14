@@ -2,19 +2,26 @@
 
 ## Version 1.4.1 
 
-Release Date: dd.mm.2023
+Release Date: 14.02.2023
 
 ### 1. New Features
 
-- TODO
+- Delete all NTSB data before reloading the Pre2008 database.
+- index: io_app_ae1982_ev_highest_injury
+- index: io_app_ae1982_ev_type
+- Maintain the new database table io_pk_ntsb to track and process deletions in NTSB in the IO-AVSTATS-DB database:
+    - l_p_k - Load NTSB primary keys into PostgreSQL 
+    - p_p_k - Process NTSB data deletions in PostgreSQL 
 
 ### 2. Modified Features
 
-- TODO
+- DB view io_app_ae1982: 
+    - missing values marked as 'n/a' instead of 'none'
 
 ### 3. Deleted Features
 
-- TODO
+- index: events_ev_highest_injury
+- index: events_ev_type
 
 ### 4. Applied Software (Windows-specific)
 
@@ -35,3 +42,5 @@ Release Date: dd.mm.2023
 #### 4.1 Minimal Requirements Visual Studio Community 2022
 
 <kbd>![](img/Visual Studio Requirements.png)</kbd>
+
+
