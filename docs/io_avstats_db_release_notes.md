@@ -1,27 +1,20 @@
 # Release Notes
 
-## Version 1.4.1 
+## Version 1.4.2 
 
-Release Date: 14.02.2023
+Release Date: dd.mm.2023
 
 ### 1. New Features
 
-- Delete all NTSB data before reloading the Pre2008 database.
-- index: io_app_ae1982_ev_highest_injury
-- index: io_app_ae1982_ev_type
-- Maintain the new database table io_pk_ntsb to track and process deletions in NTSB in the IO-AVSTATS-DB database:
-    - l_p_k - Load NTSB primary keys into PostgreSQL 
-    - p_p_k - Process NTSB data deletions in PostgreSQL 
+- TODO 
 
 ### 2. Modified Features
 
-- DB view io_app_ae1982: 
-    - missing values marked as 'n/a' instead of 'none'
+- TODO 
 
 ### 3. Deleted Features
 
-- index: events_ev_highest_injury
-- index: events_ev_type
+- TODO 
 
 ### 4. Applied Software (Windows-specific)
 
