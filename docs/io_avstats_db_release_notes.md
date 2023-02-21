@@ -1,35 +1,20 @@
 # Release Notes
 
-## Version 1.4.2 
+## Version 1.4.3 
 
-Release Date: 21.02.2023
+Release Date: dd.mm.2023
 
 ### 1. New Features
 
-- Indices
-    - io_app_ae1982.far_parts  
-    - io_app_ae1982.cictt_codes  
-    - io_app_ae1982.preventable_events  
-    - io_app_ae1982.tll_parameters  
-- Role
-    - guest
+- TODO
 
 ### 2. Modified Features
 
-- Replace USER by ROLE 
-- View io_app_ae1982: enhancements and bug fixes
+- TODO
 
 ### 3. Deleted Features
 
-- Indices
-    - aircraft.far_part  
-    - io_pk_ntsb.source  
-    - io_pk_ntsb.table_name  
-- Maintain the new database table io_pk_ntsb to track and process deletions in NTSB in the IO-AVSTATS-DB database:
-    - l_p_k - Load NTSB primary keys into PostgreSQL 
-    - p_p_k - Process NTSB data deletions in PostgreSQL 
-- Table
-    - io_pk_ntsb
+- TODO
 
 ### 4. Applied Software (Windows-specific)
 
