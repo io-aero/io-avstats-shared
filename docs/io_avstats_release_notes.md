@@ -11,10 +11,13 @@ Release Date: 09.02.2023
 - entry options for threshold values
 - optional: column sums and / or row sums in all detailed data
 - optional: pie charts with detailed data
+- "Totals Charts": Introducing optional horizontal bar charts.
 
 ### 2. Modified Features
 
 - bar charts & pie charts: always same colors for same categories
+- regrouping of the charts into "Annual Charts" and "Totals Charts".
+
 
 ### 3. Applied Software
 
@@ -36,16 +39,13 @@ Release Date: 09.02.2023
 
 #### 4.1 [NTSB - National Transport Safety Board](https://www.ntsb.gov/Pages/home.aspx){:target="_blank"}
 
-##### Data source `up01FEB.zip`
+##### Data source `up15FEB.zip`
 
-- Download link: [here](https://data.ntsb.gov/avdata/FileDirectory/DownloadFile?fileID=C%3A%5Cavdata%5Cup01FEB.zip){:target="_blank"}
-- Version: 2/8/2022 3:00:20 AM
+- Download link: [here](https://data.ntsb.gov/avdata/FileDirectory/DownloadFile?fileID=C%3A%5Cavdata%5Cup15FEB.zip){:target="_blank"}
+- Version: 2/15/2023 3:00:18 AM
 - Purpose: update of aviation accident data available for public use
 
 ### 5. Upcoming Developments
 
-- Data reconciliation between the databases of NTSB and IO-Aer.
 - Completion of the user guide documentation.
-- Regrouping of the charts into "Annual Charts" and "Totals Charts".
 - Introducing interactive maps.
-- "Totals Charts": Introducing optional horizontal bar charts.

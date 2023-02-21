@@ -38,6 +38,7 @@ nav:
       - Release Notes: io_avstats_db_release_notes.md
       - Release History: io_avstats_db_release_history.md
       - Update Log Files:
+          - 2023.02.15: 2023_02_15_update_log.md
           - 2023.02.08: 2023_02_08_update_log.md
           - 2023.02.01: 2023_02_01_update_log.md
           - avall: 2023_02_01_reset_log_avall.md
