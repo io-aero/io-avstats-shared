@@ -1,4 +1,4 @@
-copyright: Copyright &copy;2022, IO-Aero.
+copyright: Copyright &copy;2022-2023, IO-Aero.
 
 edit_uri: ""
 
@@ -30,19 +30,15 @@ nav:
       - ae1982: app_ae1982.md
       - pd1982: app_pd1982.md
       - Release Notes: io_avstats_release_notes.md
-      - Release History: io_avstats_release_history.md
   - Database:
       - Data Sources: db_sources.md
       - Data Dictionary: db_dictionary.md
       - Data Update: db_update.md
       - Release Notes: io_avstats_db_release_notes.md
-      - Release History: io_avstats_db_release_history.md
       - Update Log Files:
-          - 2023.02.15: 2023_02_15_update_log.md
-          - 2023.02.08: 2023_02_08_update_log.md
-          - 2023.02.01: 2023_02_01_update_log.md
-          - avall: 2023_02_01_reset_log_avall.md
-          - Pre2008: 2023_02_01_reset_log_Pre2008.md
+          - avall 2023.03: 2023_03_01_log_avall.md
+          - avall 2023.02: 2023_02_01_log_avall.md
+          - Pre2008: 2023_02_01_log_Pre2008.md
   - License: LICENSE.md
 
 plugins:
@@ -68,7 +64,7 @@ site_description: Aviation Event Statistics
 site_author: IO-Aero Team
 
 theme:
-  favicon: img/IO-Aero Logo.png
+  favicon: img/IO-Aero_Favicon.ico
   features:
     - search.highlight
     - search.suggest
