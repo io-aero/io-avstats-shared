@@ -275,21 +275,31 @@ regis_nos                    |{N6763,N7227C}     |
 
 - `events.ev_highest_injury`
 - `events.ev_id`
-- `events.ev_month`
+~~- `events.ev_month`~~
 - `events.ev_type`
 - `events.ev_year`
 - `events.inj_f_grnd`
 - `events.inj_tot_f`
-- `events.lat_lng_acq`
+- `events.io_dec_latitude_deviating`
+- `events.io_dec_longitude_deviating`
+- `events.io_invalid_latitude`
+- `events.io_invalid_longitude`
+- `events.io_invalid_us_city`
+- `events.io_invalid_us_city_zip_code`
+- `events.io_invalid_us_state`
+- `events.io_invalid_us_zipcode`
 - `events.ntsb_no`
 
 #### Original Data - with Conditions
 
-- `events.ev_dow` - capital letters
+~~- `events.ev_dow` - capital letters~~
 - `events.io_city` - if empty `events.ev_city`
 - `events.io_country` - if empty `events.ev_country`
 - `events.io_dec_latitude` - if empty `events.ev_dec_latitude`
 - `events.io_dec_longitude` - if empty `events.ev_dec_longitude`
+- `events.io_latlong_acq` 
+    - 'NONE' if NOT `events.io_latlong_acq` AND NOT `events.latlong_acq` AND (ONE OF `events.dec_latitude`, `events.dec_longitude`, `events.dec_latitude` or `events.io_dec_longitude`) 
+    - `events.io_latlong_acq` - if empty `events.latlong_acq` - if empty 'NRE'
 - `events.io_site_zipcode` - if empty `events.ev_site_zipcodey`
 - `events.io_state` - if empty `events.ev_state`
 
@@ -298,15 +308,15 @@ regis_nos                    |{N6763,N7227C}     |
 ##### Level Base
 
 - `acft_categories` - an array of `aircraft.acft_categoriy`
-- `all_defining_occurrence_codes` - an array of `events_sequence.occurrence_code` where
-    - `events_sequence.defining_ev` is true 
-- `all_finding_codes` - an array of `findings.finding_code` 
-- `all_occurrence_codes` - an array of `events_sequence.occurrence_code` 
+~~- `all_defining_occurrence_codes` - an array of `events_sequence.occurrence_code` where~~
+    ~~- `events_sequence.defining_ev` is true~~
+~~- `all_finding_codes` - an array of `findings.finding_code`~~
+~~- `all_occurrence_codes` - an array of `events_sequence.occurrence_code`~~
 - `cictt_codes` - an array of `io_aviation_occurrence_categories.cictt_code` where
     - `io_sequence_of_events.soe_no` in `events_sequence` where
         - `events_sequence.defining_ev` is true 
-- `dest_countries` - an array of `aircraft.dest_country`
-- `dprt_countries` - an array of `aircraft.dprt_country`
+~~- `dest_countries` - an array of `aircraft.dest_country`~~
+~~- `dprt_countries` - an array of `aircraft.dprt_country`~~
 - `far_parts` - an array of `aircraft.far_part`
 - `finding_codes` - an array of transcoded `findings.finding_code`
     - `findings.finding_code` = `01062012` results in `PARAMS_ALT`, 
@@ -341,17 +351,24 @@ regis_nos                    |{N6763,N7227C}     |
     - `events_sequence.occurrence_code` like `xxx401` results in `UIMC`, 
     - `events_sequence.occurrence_code` like `xxx420` results in `CAA`, 
     - `events_sequence.occurrence_code` like `xxx901` results in `BIRD`, 
-- `oper_countries` - an array of `aircraft.oper_country`
-- `owner_countries` - an array of `aircraft.owner_country`
-- `regis_countries` - an array of transcoded `aircraft.regis_no`
-    - `aircraft.regis_no` like `N[1-9][0-9][0-9][0-9][0-9]` results in `USA`, 
-    - `aircraft.regis_no` like `N[1-9][0-9][0-9][0-9][A-Z]` results in `USA`, 
-    - `aircraft.regis_no` like `N[1-9][0-9][0-9][A-Z][A-Z]` results in `USA`, 
-    - `NON-US` else
-- `regis_nos` - an array of `aircraft.regis_no`
+~~- `oper_countries` - an array of `aircraft.oper_country`
+~~- `owner_countries` - an array of `aircraft.owner_country`~~
+~~- `regis_countries` - an array of transcoded `aircraft.regis_no`~~
+~~    - `aircraft.regis_no` like `N[1-9][0-9][0-9][0-9][0-9]` results in `USA`,~~
+    ~~- `aircraft.regis_no` like `N[1-9][0-9][0-9][0-9][A-Z]` results in `USA`,~~
+    ~~- `aircraft.regis_no` like `N[1-9][0-9][0-9][A-Z][A-Z]` results in `USA`,~~
+    ~~- `NON-US` else~~
+~~- `regis_nos` - an array of `aircraft.regis_no`~~
 
 ##### Level 1
 
+                                               CASE WHEN level_1.cictt_codes::text[] = ARRAY[]::text[] THEN (ARRAY['n/a'])
+                                                                                                       ELSE level_1.cictt_codes      
+                                                END cictt_codes,
+
+
+- `cictt_codes` - ARRAY['n/a'] if empty 
+- `far_parts` - ARRAY['n/a'] if empty 
 - `is_dest_country_usa` - `True` if `dest_countries` contains `USA`
 - `is_dprt_country_usa` - `True` if `dprt_countries` contains `USA`
 - `is_emergency_landing` - `True` if
@@ -363,24 +380,25 @@ regis_nos                    |{N6763,N7227C}     |
         - `events_sequence.occurrence_code` in (`xxx133`, `xxx133`, `xxx133`, `xxx133`, `xxx133`, `xxx133`, `xxx133`, `xxx133`, `xxx133`, `xxx133`, `xxx133`, `xxx133`, `xxx133`, `xxx133`, )
         - `events_sequence.occurrence_code` in (`xxx337`, `xxx338`) and
         - `events_sequence.defining_ev` is true 
-- `is_far_part_091x` - `True` if `far_parts` contains at least one of `091`, `091F` or `091K` 
-- `is_far_part_121` - `True` if `far_parts` contains at least one `121` 
-- `is_far_part_135` - `True` if `far_parts` contains at least one `135` 
-- `is_oper_country_usa` - `True` if `oper_countries` contains `USA`
+- `is_far_part_091x`     - `True` if `far_parts` contains at least one of `091`, `091F` or `091K` 
+- `is_far_part_121`      - `True` if `far_parts` contains at least one `121` 
+- `is_far_part_135`      - `True` if `far_parts` contains at least one `135` 
+- `is_far_part_other`    - `True` if `far_parts` contains none of  `091`, `091F` or `091K`, `121`, `135` 
+- `is_oper_country_usa`  - `True` if `oper_countries` contains `USA`
 - `is_owner_country_usa` - `True` if `owner_countries` contains `USA`
 - `is_regis_country_usa` - `True` if `regis_countries` contains `USA`
 - `is_spin_stall` - `True` if
-    - `finding_codes` contains `PARAMS_AoA`,                       or
-    - `occurrence_codes`contains `STALL`                           or
-    - `occurrence_codes`contains `LOC-I` and `narr_stall`is `True` and not
+    - (`finding_codes` contains `PARAMS_AoA`,                        or
+    -  `occurrence_codes`contains `STALL`                            or
+    -  `occurrence_codes`contains `LOC-I` and `narr_stall`is `True`) and not
     - `occurrence_codes`contains `CAA` or `CFIT` 
 
 ##### Level 2
 
 - `is_altitude_controllable` - `True` if
     - `is_atttitude_controllable` is `True` and 
-    - `is_emergency_landing` is `True` and not
-    - `is_spin_stall` is `True`
+    - `is_emergency_landing`      is `True` and not
+    - `is_spin_stall`             is `True`
 - `is_altitude_low` - `True` if
     - `spin_stall` is `False`                      and 
     - `occurrence_codes` does not contain `MIDAIR` and
@@ -402,14 +420,32 @@ regis_nos                    |{N6763,N7227C}     |
 
 - `is_rss_forced_landing` - `True` if
     - `is_altitude_controllable` is `True` and 
-    - `is_emergency_landing`
+    - `is_emergency_landing`     is `True`
 - `is_rss_spin_stall_prevention_and_recovery` - `True` if
     - `is_attitude_controllable` is `True` and 
-    - `is_spin_stall` is `True`
+    - `is_spin_stall`            is `True`
 - `is_rss_terrain_collision_avoidance` - `True` if
     - `is_altitude_controllable` is `True` and 
-    - `is_altitude_low` is `True` and 
-    - `is_attitude_controllable`
+    - `is_altitude_low`          is `True` and 
+    - `is_attitude_controllable` is `True`
+
+##### Level 4
+
+- `is_lp_n_a` - `True` if
+    - `is_altitude_low`                           is `False` and 
+    - `is_attitude_controllable`                  is `False` and 
+    - `is_emergency_landing`                      is `False` and 
+    - `is_midair_collision`                       is `False` and 
+    - `is_pilot_issue`                            is `False` and 
+    - `is_rss_forced_landing`                     is `False` and 
+    - `is_rss_spin_stall_prevention_and_recovery` is `False` and 
+    - `is_rss_terrain_collision_avoidance`        is `False` and 
+    - `is_spin_stall`                             is `False` 
+- `is_rss_n_a` - `True` if
+    - `is_midair_collision`                       is `False` and 
+    - `is_rss_forced_landing`                     is `False` and 
+    - `is_rss_spin_stall_prevention_and_recovery` is `False` and 
+    - `is_rss_terrain_collision_avoidance`        is `False` 
 
 ### 4.2 `io_lat_long_issues`
 
@@ -421,47 +457,56 @@ Only original data from the relevant tables are shown here.
 Sample data:
 
 ```
-Name                      |Value                                                 |
---------------------------+------------------------------------------------------+
-ev_id                     |20030618X00903                                        |
-ev_country                |USA                                                   |
-ev_state                  |AK                                                    |
-ev_city                   |Anchorage                                             |
-ev_site_zipcode           |99515                                                 |
-ev_dec_latitude           |                                                      |
-ev_dec_longitude          |                                                      |
-ev_latitude               |610624N                                               |
-ev_longitude              |1495152W                                              |
-io_country                |                                                      |
-io_state                  |                                                      |
-io_city                   |                                                      |
-io_site_zipcode           |                                                      |
-io_dec_latitude           |61.10666666666667                                     |
-io_dec_longitude          |-149.86444444444444                                   |
-io_latitude               |                                                      |
-io_longitude              |                                                      |
-io_dec_lat_lng_actions    |INFO.00.037 Correction based on latitude and longitude|
-io_dec_latitude_deviating |                                                      |
-io_dec_longitude_deviating|                                                      |
-io_invalid_latitude       |                                                      |
-io_invalid_longitude      |                                                      |
-io_invalid_us_city        |                                                      |
-io_invalid_us_city_zipcode|                                                      |
-io_invalid_us_state       |                                                      |
-io_invalid_us_zipcode     |                                                      |
-country                   |USA                                                   |
-state                     |AK                                                    |
-city                      |Anchorage                                             |
-site_zipcode              |99515                                                 |
-latitude                  |610624N                                               |
-longitude                 |1495152W                                              |
-state_name                |Alaska                                                |
-zipcode_dec_latitude      |61.11733                                              |
-zipcode_dec_longitude     |-149.88894                                            |
-city_dec_latitude         |61.1508                                               |
-city_dec_longitude        |-149.1091                                             |
-state_dec_latitude        |63.7431630974                                         |
-state_dec_longitude       |-151.594035116                                        |
-country_dec_latitude      |37.09024                                              |
-country_dec_longitude     |-95.712891                                            |
+Name                                     |Value            |
+-----------------------------------------+-----------------+
+ev_id                                    |20221212106439   |
+ntsb_no                                  |DCA23LA093       |
+ev_type                                  |ACC              |
+ev_year                                  |2022             |
+country                                  |USA              |
+state                                    |NJ               |
+city                                     |Newark           |
+zip                                      |                 |
+acft_categories                          |{AIR,AIR}        |
+cictt_codes                              |{TURB}           |
+dec_latitude                             |40.700601        |
+dec_latitude_deviating                   |36.62782322222222|
+dec_longitude                            |-74.162973       |
+dec_longitude_deviating                  |66.33325077777778|
+ev_highest_injury                        |SERS             |
+far_parts                                |{121,129}        |
+finding_codes                            |{}               |
+inj_f_grnd                               |0                |
+inj_tot_f                                |0                |
+is_altitude_controllable                 |true             |
+is_altitude_low                          |false            |
+is_attitude_controllable                 |true             |
+is_dest_country_usa                      |false            |
+is_dprt_country_usa                      |false            |
+is_emergency_landing                     |false            |
+is_far_part_091x                         |false            |
+is_far_part_121                          |true             |
+is_far_part_135                          |false            |
+is_far_part_other                        |false            |
+is_invalid_latitude                      |false            |
+is_invalid_longitude                     |false            |
+is_invalid_us_city                       |false            |
+is_invalid_us_city_zipcode               |false            |
+is_invalid_us_state                      |false            |
+is_invalid_us_zipcode                    |false            |
+is_lp_n_a                                |false            |
+is_midair_collision                      |false            |
+is_narrative_stall                       |false            |
+is_oper_country_usa                      |true             |
+is_owner_country_usa                     |true             |
+is_pilot_issue                           |false            |
+is_regis_country_usa                     |true             |
+is_rss_forced_landing                    |false            |
+is_rss_n_a                               |false            |
+is_rss_spin_stall_prevention_and_recovery|false            |
+is_rss_terrain_collision_avoidance       |true             |
+is_spin_stall                            |false            |
+latlong_acq                              |MEAS             |
+no_aircraft                              |2                |
+occurrence_codes                         |{}               |
 ```
