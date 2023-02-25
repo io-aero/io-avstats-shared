@@ -1,0 +1,1311 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Aviation Event Statistics">
+      
+      
+        <meta name="author" content="IO-Aero Team">
+      
+      
+        <link rel="canonical" href="https://io-aero.com/db_dictionary.html">
+      
+      
+        <link rel="prev" href="db_sources.html">
+      
+      
+        <link rel="next" href="db_update.html">
+      
+      <link rel="icon" href="img/IO-Aero_Favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.14">
+    
+    
+      
+        <title>Data Dictionary - IO-AVSTATS - Aviation Event Statistics</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.113286f1.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="assets/pymdownx-extras/extra-b1466b3f51.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="red">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#io-avstats-db-data-dictionary" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="IO-AVSTATS - Aviation Event Statistics" class="md-header__button md-logo" aria-label="IO-AVSTATS - Aviation Event Statistics" data-md-component="logo">
+      
+  <img src="img/IO-Aero Logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IO-AVSTATS - Aviation Event Statistics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Data Dictionary
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/io-aero/io-avstats-shared" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="IO-AVSTATS - Aviation Event Statistics" class="md-nav__button md-logo" aria-label="IO-AVSTATS - Aviation Event Statistics" data-md-component="logo">
+      
+  <img src="img/IO-Aero Logo.png" alt="logo">
+
+    </a>
+    IO-AVSTATS - Aviation Event Statistics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/io-aero/io-avstats-shared" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Applications
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Applications
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="app_ae1982.html" class="md-nav__link">
+        ae1982
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="app_pd1982.html" class="md-nav__link">
+        pd1982
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="io_avstats_release_notes.html" class="md-nav__link">
+        Release Notes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Database
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Database
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="db_sources.html" class="md-nav__link">
+        Data Sources
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Data Dictionary
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="db_dictionary.html" class="md-nav__link md-nav__link--active">
+        Data Dictionary
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-general" class="md-nav__link">
+    1. General
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-database-tables-ntsb" class="md-nav__link">
+    2. Database Tables NTSB
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-database-tables-io-aero" class="md-nav__link">
+    3. Database Tables IO-Aero
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Database Tables IO-Aero">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-io_aviation_occurrence_categories" class="md-nav__link">
+    3.1 io_aviation_occurrence_categories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-io_countries" class="md-nav__link">
+    3.2 io_countries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-io_lat_long" class="md-nav__link">
+    3.3 io_lat_long
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-io_ntsb_2002_2021" class="md-nav__link">
+    3.4 io_ntsb_2002_2021
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-io_processed_files" class="md-nav__link">
+    3.5 io_processed_files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-io_sequence_of_events" class="md-nav__link">
+    3.6 io_sequence_of_events
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-io_states" class="md-nav__link">
+    3.7 io_states
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-database-views-io-aero" class="md-nav__link">
+    4. Database Views IO-Aero
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Database Views IO-Aero">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-io_app_ae1982" class="md-nav__link">
+    4.1 io_app_ae1982
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-io_lat_long_issues" class="md-nav__link">
+    4.2 io_lat_long_issues
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="db_update.html" class="md-nav__link">
+        Data Update
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="io_avstats_db_release_notes.html" class="md-nav__link">
+        Release Notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+          Update Log Files
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Update Log Files
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2023_03_01_log_avall.html" class="md-nav__link">
+        avall 2023.03
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2023_02_01_log_avall.html" class="md-nav__link">
+        avall 2023.02
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2023_02_01_log_Pre2008.html" class="md-nav__link">
+        Pre2008
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="LICENSE.html" class="md-nav__link">
+        License
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-general" class="md-nav__link">
+    1. General
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-database-tables-ntsb" class="md-nav__link">
+    2. Database Tables NTSB
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-database-tables-io-aero" class="md-nav__link">
+    3. Database Tables IO-Aero
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Database Tables IO-Aero">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-io_aviation_occurrence_categories" class="md-nav__link">
+    3.1 io_aviation_occurrence_categories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-io_countries" class="md-nav__link">
+    3.2 io_countries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-io_lat_long" class="md-nav__link">
+    3.3 io_lat_long
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-io_ntsb_2002_2021" class="md-nav__link">
+    3.4 io_ntsb_2002_2021
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-io_processed_files" class="md-nav__link">
+    3.5 io_processed_files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-io_sequence_of_events" class="md-nav__link">
+    3.6 io_sequence_of_events
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-io_states" class="md-nav__link">
+    3.7 io_states
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-database-views-io-aero" class="md-nav__link">
+    4. Database Views IO-Aero
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Database Views IO-Aero">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-io_app_ae1982" class="md-nav__link">
+    4.1 io_app_ae1982
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-io_lat_long_issues" class="md-nav__link">
+    4.2 io_lat_long_issues
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="io-avstats-db-data-dictionary">IO-AVSTATS-DB - Data Dictionary</h1>
+<h2 id="1-general">1. General</h2>
+<h2 id="2-database-tables-ntsb">2. Database Tables NTSB</h2>
+<p>For the data provided by <strong>NTSB</strong> in the form of MS Access databases, the data dictionary was extracted using RazorSQL and transferred to the PostgreSQL database <strong>IO-AVSTATS-DB</strong>. 
+This includes the following tables:</p>
+<ul>
+<li><code>aircraft</code></li>
+<li><code>dt_aircraft</code></li>
+<li><code>dt_events</code></li>
+<li><code>dt_flight_crew</code></li>
+<li><code>engines</code></li>
+<li><code>events</code></li>
+<li><code>events_sequence</code></li>
+<li><code>findings</code></li>
+<li><code>flight_crew</code></li>
+<li><code>flight_time</code></li>
+<li><code>injury</code></li>
+<li><code>narratives</code></li>
+<li><code>ntsb_admin</code></li>
+<li><code>occurrences</code></li>
+<li><code>seq_of_events</code></li>
+</ul>
+<h2 id="3-database-tables-io-aero">3. Database Tables IO-Aero</h2>
+<p><strong>IO-Aero</strong> has added the following new tables:</p>
+<ul>
+<li><code>io_aviation_occurrence_categories</code></li>
+<li><code>io_countries</code></li>
+<li><code>io_lat_long</code></li>
+<li><code>io_ntsb_2002_2021</code></li>
+<li><code>io_processed_files</code></li>
+<li><code>io_states</code></li>
+</ul>
+<h3 id="31-io_aviation_occurrence_categories">3.1 <code>io_aviation_occurrence_categories</code></h3>
+<p>This table contains CICTT codes from the document <strong>Aviation Occurrence Categories</strong>.</p>
+<p><kbd><img alt="" src="img/ddl_io_aviation_occurrence_categories.png" /></kbd></p>
+<p>Sample data:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Name           |Value                                                                  
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>---------------+-----------------------------------------------------------------------
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>cictt_code     |LOC-I                                                                  
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>identifier     |LOSS OF CONTROL–INFLIGHT                                               
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>definition     |Loss of aircraft control while, or deviation from intended flightpat...
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>first_processed|2023-01-18 11:07:38.756                                                
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>last_processed |                                                                       
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>last_seen      |2023-01-18 10:07:37.837                                                
+</code></pre></div>
+<h3 id="32-io_countries">3.2 <code>io_countries</code></h3>
+<p>This table mainly contains data on latitudes and longitudes of countries.
+Currently, only the values of the USA are stored.</p>
+<p>The latitude and longitude stored here will be applied to US events that do not themselves contain decimal latitude and longitude and which cannot be determined at the zip code, city or state level.</p>
+<p><kbd><img alt="" src="img/ddl_io_countries.png" /></kbd></p>
+<p>Sample data:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>country|country_name |dec_latitude|dec_longitude|
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>-------+-------------+------------+-------------+
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>USA    |United States|    37.09024|   -95.712891|
+</code></pre></div>
+<h3 id="33-io_lat_long">3.3 <code>io_lat_long</code></h3>
+<p>This is the main table for determining missing latitude or longitude for US events.
+The table is fed by the following sources:</p>
+<ul>
+<li><code>simplemaps United States Cities Database</code></li>
+<li><code>simplemaps US Zip Codes Database</code></li>
+<li><code>Zip Codes.org ZIP Code Database</code></li>
+</ul>
+<p>In addition, the missing values for cities are averaged from the values of the matching zip codes. </p>
+<p><kbd><img alt="" src="img/ddl_io_lat_lng.png" /></kbd></p>
+<p>Sample data:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Name           |Value                           |
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>---------------+--------------------------------+
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>id             |13620                           |
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>type           |ZIPCODE                         |
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>country        |USA                             |
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>state          |SC                              |
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>city           |ABBEVILLE                       |
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>zipcode        |29620                           |
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>dec_latitude   |34.1813                         |
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>dec_longitude  |-82.42804                       |
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>source         |simplemaps US Zip Codes Database|
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>first_processed|2022-11-29 13:11:16.347         |
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>last_processed |2022-11-29 13:28:49.520         |
+</code></pre></div>
+<h3 id="34-io_ntsb_2002_2021">3.4 <code>io_ntsb_2002_2021</code></h3>
+<p>In the November 17, 2021, news release <a href="https://www.ntsb.gov/news/press-releases/Pages/NR20211117.aspx" target="_blank">U.S. Civil Aviation Fatalities and Flight Activity Decreased in 2020</a>, the <strong>NTSB</strong> published, among other things, the <a href="https://www.ntsb.gov/safety/Pages/research.aspx" target="_blank">US Civil Aviation Accident Statistics</a>.
+These are available on this website at this <a href="https://www.ntsb.gov/safety/data/Documents/AviationAccidentStatistics_2002-2021_20221208.xlsx" target="_blank">link</a> as an MS Excel file.
+This file contains 28 worksheets (Table 1 through Table 28) of accumulated data, and in Worksheet 29 (Table 29. Accident Aircraft, 2002 through 2021, US Civil Aviation) (most likely) the underlying event and aircraft details. 
+The data from Worksheet 29 were loaded unchanged into this database table.
+To simplify the use of the database table, only the columns <code>ev_year</code>, <code>ev_state</code> and <code>ev_country</code>, derived from the columns <code>event_date</code>, <code>state_or_region</code> and <code>country</code>, were added.
+The header lines and the empty lines for the loading process were ignored. </p>
+<p><kbd><img alt="" src="img/ddl_io_ntsb_2002_2021.png" /></kbd></p>
+<p>Sample data:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Name                |Value                                           
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>--------------------+------------------------------------------------
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>ntsb_number         |MIA02LA056                                      
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>accident_report     |=HYPERLINK(&quot;http://data.ntsb.gov/...&quot;,&quot;Report&quot;)|
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>event_date          |2002-01-20 00:00:00.000                         
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>ev_year             |2002                                            
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>city                |Sarasota                                        
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>state_or_region     |Florida                                         
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>ev_state            |FL                                              
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>country             |United States                                   
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>ev_country          |USA                                             
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>latitude            |27.395277                                       
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>longitude           |-82.553886                                      
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>fatal_injuries      |                                                
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>serious_injuries    |                                                
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>highest_injury_level|None                                            
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>aircraft_number     |1                                               
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>damage_level        |Substantial                                     
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>registration_number |N235AL                                          
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>aircraft_category   |Airplane                                        
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>aircraft_make       |Maule                                           
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>aircraft_model      |M-7-235B                                        
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>flight_regulation   |Part 91: General aviation                       
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>flight_schedule_type|                                                
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>purpose_of_flight   |Personal                                        
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>intentional_act     |                                                
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>defining_event      |                                                
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>phase_of_flight     |                                                
+</code></pre></div>
+<h3 id="35-io_processed_files">3.5 <code>io_processed_files</code></h3>
+<p>This table documents which external files were processed to create and maintain the database content.</p>
+<p><kbd><img alt="" src="img/ddl_io_processed_files.png" /></kbd></p>
+<p>Sample data:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Name           |Value                  |
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>---------------+-----------------------+
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>file_name      |up22NOV                |
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>first_processed|2022-11-27 13:40:18.094|
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>last_processed |2022-12-12 12:08:15.915|
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>counter        |2                      |
+</code></pre></div>
+<h3 id="36-io_sequence_of_events">3.6 <code>io_sequence_of_events</code></h3>
+<p>This table enables the assignment of CICTT codes via the event sequence number.</p>
+<p><kbd><img alt="" src="img/ddl_io_sequence_of_events.png" /></kbd></p>
+<p>Sample data:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>soe_no|cictt_code|meaning                                  
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>------+----------+-----------------------------------------
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>     0|UNK       |Unknown or undetermined                  
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    10|RAMP      |Aircraft loading event                   
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    20|RAMP      |Aircraft servicing event                 
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    30|          |Preflight or dispatch event              
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    40|          |Aircraft maintenance event               
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    50|          |Aircraft inspection event                
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    60|          |Attempted remediation/recovery           
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    70|ADRM      |Airport occurrence                       
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    80|RAMP      |Ground handling event                    
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>    81|RAMP      |AC/prop/rotor contact w person           
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    82|RAMP      |Prop/jet/rotor blast/suction             
+</code></pre></div>
+<h3 id="37-io_states">3.7 <code>io_states</code></h3>
+<p>This table mainly contains data on latitudes and longitudes of US states.</p>
+<p>The latitude and longitude stored here will be applied to US events that do not themselves contain decimal latitude and longitude and which cannot be determined at the zip code or city level.</p>
+<p><kbd><img alt="" src="img/ddl_io_states.png" /></kbd></p>
+<p>Sample data:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>country|state|state_name          |dec_latitude |dec_longitude |
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>-------+-----+--------------------+-------------+--------------+
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>USA    |AK   |Alaska              |63.7431630974|-151.594035116|
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>USA    |AL   |Alabama             |32.7570463396| -86.844525962|
+</code></pre></div>
+<h2 id="4-database-views-io-aero">4. Database Views IO-Aero</h2>
+<p><strong>IO-Aero</strong> has added the following views:</p>
+<ul>
+<li><code>io_app_ae1982</code></li>
+<li><code>io_lat_long_issues</code></li>
+</ul>
+<h3 id="41-io_app_ae1982">4.1 <code>io_app_ae1982</code></h3>
+<p>This materialized view provides all necessary data for <strong>IO-Aero</strong>'s streamlit application <code>ae1982</code> (Aviation Events between ...).</p>
+<p><kbd><img alt="" src="img/ddl_io_app_ae1982.png" /></kbd></p>
+<p>Sample data:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Name                         |Value              |
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>-----------------------------+-------------------+
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>ev_id                        |20221112106276     |
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>ntsb_no                      |CEN23MA034         |
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>ev_type                      |ACC                |
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>ev_year                      |2022               |
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>ev_month                     |11                 |
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>ev_dow                       |SA                 |
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>country                      |USA                |
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>state                        |TX                 |
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>city                         |Dallas             |
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>zip                          |75237              |
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>acft_categories              |{AIR,AIR}          |
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>all_defining_occurrence_codes|{452250,452250}    |
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>all_finding_codes            |{}                 |
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>all_occurrence_codes         |{452250,452250}    |
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>cictt_codes                  |{MAC}              |
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>dec_latitude                 |32.673779          |
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>dec_longitude                |-96.862801         |
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>dest_countries               |{}                 |
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>dprt_countries               |{}                 |
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>ev_counter                   |1                  |
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>ev_highest_injury            |FATL               |
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>far_parts                    |{091,091}          |
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>finding_codes                |{}                 |
+<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>inj_f_grnd                   |0                  |
+<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>inj_tot_f                    |6                  |
+<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>is_altitude_controllable     |false              |
+<a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>is_altitude_low              |true               |
+<a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a>is_atttitude_controllable    |false              |
+<a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a>is_dest_country_usa          |false              |
+<a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a>is_dprt_country_usa          |false              |
+<a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a>is_emergency_landing         |true               |
+<a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a>is_far_part_091x             |true               |
+<a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a>is_far_part_121              |false              |
+<a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a>is_far_part_135              |false              |
+<a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a>is_midair_collision          |true               |
+<a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a>is_narrative_stall           |false              |
+<a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a>is_oper_country_usa          |true               |
+<a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a>is_owner_country_usa         |true               |
+<a id="__codelineno-7-41" name="__codelineno-7-41" href="#__codelineno-7-41"></a>is_pilot_issue               |false              |
+<a id="__codelineno-7-42" name="__codelineno-7-42" href="#__codelineno-7-42"></a>is_regis_country_usa         |true               |
+<a id="__codelineno-7-43" name="__codelineno-7-43" href="#__codelineno-7-43"></a>is_spin_stall                |false              |
+<a id="__codelineno-7-44" name="__codelineno-7-44" href="#__codelineno-7-44"></a>latlong_acq                  |MEAS               |
+<a id="__codelineno-7-45" name="__codelineno-7-45" href="#__codelineno-7-45"></a>no_aircraft                  |2                  |
+<a id="__codelineno-7-46" name="__codelineno-7-46" href="#__codelineno-7-46"></a>occurrence_codes             |{MAN_LALT,MAN_LALT}|
+<a id="__codelineno-7-47" name="__codelineno-7-47" href="#__codelineno-7-47"></a>oper_countries               |{USA,USA}          |
+<a id="__codelineno-7-48" name="__codelineno-7-48" href="#__codelineno-7-48"></a>owner_countries              |{USA,USA}          |
+<a id="__codelineno-7-49" name="__codelineno-7-49" href="#__codelineno-7-49"></a>regis_countries              |{NON-US,USA}       |
+<a id="__codelineno-7-50" name="__codelineno-7-50" href="#__codelineno-7-50"></a>regis_nos                    |{N6763,N7227C}     |
+</code></pre></div>
+<h4 id="original-data-unconditional">Original Data - Unconditional</h4>
+<ul>
+<li><code>events.ev_highest_injury</code></li>
+<li><code>events.ev_id</code>
+<del>- <code>events.ev_month</code></del></li>
+<li><code>events.ev_type</code></li>
+<li><code>events.ev_year</code></li>
+<li><code>events.inj_f_grnd</code></li>
+<li><code>events.inj_tot_f</code></li>
+<li><code>events.io_dec_latitude_deviating</code></li>
+<li><code>events.io_dec_longitude_deviating</code></li>
+<li><code>events.io_invalid_latitude</code></li>
+<li><code>events.io_invalid_longitude</code></li>
+<li><code>events.io_invalid_us_city</code></li>
+<li><code>events.io_invalid_us_city_zip_code</code></li>
+<li><code>events.io_invalid_us_state</code></li>
+<li><code>events.io_invalid_us_zipcode</code></li>
+<li><code>events.ntsb_no</code></li>
+</ul>
+<h4 id="original-data-with-conditions">Original Data - with Conditions</h4>
+<p><del>- <code>events.ev_dow</code> - capital letters</del>
+- <code>events.io_city</code> - if empty <code>events.ev_city</code>
+- <code>events.io_country</code> - if empty <code>events.ev_country</code>
+- <code>events.io_dec_latitude</code> - if empty <code>events.ev_dec_latitude</code>
+- <code>events.io_dec_longitude</code> - if empty <code>events.ev_dec_longitude</code>
+- <code>events.io_latlong_acq</code> 
+    - 'NONE' if NOT <code>events.io_latlong_acq</code> AND NOT <code>events.latlong_acq</code> AND (ONE OF <code>events.dec_latitude</code>, <code>events.dec_longitude</code>, <code>events.dec_latitude</code> or <code>events.io_dec_longitude</code>) 
+    - <code>events.io_latlong_acq</code> - if empty <code>events.latlong_acq</code> - if empty 'NRE'
+- <code>events.io_site_zipcode</code> - if empty <code>events.ev_site_zipcodey</code>
+- <code>events.io_state</code> - if empty <code>events.ev_state</code></p>
+<h4 id="logical-variables">Logical Variables</h4>
+<h5 id="level-base">Level Base</h5>
+<ul>
+<li><code>acft_categories</code> - an array of <code>aircraft.acft_categoriy</code>
+<del>- <code>all_defining_occurrence_codes</code> - an array of <code>events_sequence.occurrence_code</code> where</del>
+    <del>- <code>events_sequence.defining_ev</code> is true</del>
+<del>- <code>all_finding_codes</code> - an array of <code>findings.finding_code</code></del>
+<del>- <code>all_occurrence_codes</code> - an array of <code>events_sequence.occurrence_code</code></del></li>
+<li><code>cictt_codes</code> - an array of <code>io_aviation_occurrence_categories.cictt_code</code> where<ul>
+<li><code>io_sequence_of_events.soe_no</code> in <code>events_sequence</code> where<ul>
+<li><code>events_sequence.defining_ev</code> is true 
+<del>- <code>dest_countries</code> - an array of <code>aircraft.dest_country</code></del>
+<del>- <code>dprt_countries</code> - an array of <code>aircraft.dprt_country</code></del></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>far_parts</code> - an array of <code>aircraft.far_part</code></li>
+<li><code>finding_codes</code> - an array of transcoded <code>findings.finding_code</code><ul>
+<li><code>findings.finding_code</code> = <code>01062012</code> results in <code>PARAMS_ALT</code>, </li>
+<li><code>findings.finding_code</code> = <code>01062037</code> results in <code>PARAMS_DEC_RATE</code>, </li>
+<li><code>findings.finding_code</code> = <code>01062040</code> results in <code>PARAMS_DEC_APP</code>, </li>
+<li><code>findings.finding_code</code> = <code>01062042</code> results in <code>PARAMS_AoA</code>, </li>
+<li><code>findings.finding_code</code> like <code>030210xx</code> results in <code>ENV_TER</code>, </li>
+<li><code>findings.finding_code</code> like <code>030220xx</code> results in <code>ENV_OAS</code> </li>
+</ul>
+</li>
+<li><code>is_atttitude_controllable</code> - <code>True</code> if<ul>
+<li><code>findings.finding_code</code> in (<code>010355xx</code>, <code>010357xx</code>, <code>030320xx</code>) or </li>
+<li><code>findings.finding_code</code> in (<code>01061040</code>, <code>03030000</code>, <code>03031025</code>, <code>03034020</code>, <code>03034030</code>, <code>03034050</code>, <code>03034060</code>) or </li>
+<li><code>events_sequence.occurrence_code</code> in (<code>xxx210</code>, <code>xxx245</code>, <code>xxx333</code>, <code>xxx361</code>) or </li>
+<li><code>events_sequence.occurrence_code</code> in (<code>xxx337</code>, <code>xxx338</code>) and</li>
+<li><code>events_sequence.defining_ev</code> is true </li>
+</ul>
+</li>
+<li><code>is_midair_collision</code> - <code>True</code> if<ul>
+<li><code>events_sequence.occurrence_code</code> like <code>xxx250</code> and</li>
+<li><code>events_sequence.defining_ev</code> is true </li>
+</ul>
+</li>
+<li><code>is_narrative_stall</code> - <code>True</code>if <ul>
+<li>any <code>narr_accp</code> contains the string <code>STALL</code> (case-insensitive)</li>
+</ul>
+</li>
+<li><code>is_pilot_issue</code> - <code>True</code> if<ul>
+<li><code>findings.finding_code</code> in (<code>xxxxxx44</code>, <code>xxxxxx45</code>, <code>xxxxxx46</code>) </li>
+</ul>
+</li>
+<li><code>no_aircraft</code> - number of aviation objects involved</li>
+<li><code>occurrence_codes</code> - an array of transcoded <code>events_sequence.occurrence_code</code><ul>
+<li><code>events_sequence.occurrence_code</code> like <code>350xxx</code> results in <code>INIT_CLIMB</code>, </li>
+<li><code>events_sequence.occurrence_code</code> like <code>452xxx</code> results in <code>MAN_LAIT</code>, </li>
+<li><code>events_sequence.occurrence_code</code> like <code>502xxx</code> results in <code>FINAL_APP</code>, </li>
+<li><code>events_sequence.occurrence_code</code> like <code>xxx120</code> results in <code>CFIT</code>, </li>
+<li><code>events_sequence.occurrence_code</code> like <code>xxx220</code> results in <code>LALT</code>, </li>
+<li><code>events_sequence.occurrence_code</code> like <code>xxx240</code> results in <code>LOC-I</code>, </li>
+<li><code>events_sequence.occurrence_code</code> like <code>xxx241</code> results in <code>STALL</code>, </li>
+<li><code>events_sequence.occurrence_code</code> like <code>xxx250</code> results in <code>MIDAIR</code>, </li>
+<li><code>events_sequence.occurrence_code</code> like <code>xxx401</code> results in <code>UIMC</code>, </li>
+<li><code>events_sequence.occurrence_code</code> like <code>xxx420</code> results in <code>CAA</code>, </li>
+<li><code>events_sequence.occurrence_code</code> like <code>xxx901</code> results in <code>BIRD</code>, 
+<del>- <code>oper_countries</code> - an array of <code>aircraft.oper_country</code>
+~~- <code>owner_countries</code> - an array of <code>aircraft.owner_country</code></del>
+<del>- <code>regis_countries</code> - an array of transcoded <code>aircraft.regis_no</code></del>
+~~    - <code>aircraft.regis_no</code> like <code>N[1-9][0-9][0-9][0-9][0-9]</code> results in <code>USA</code>,~~
+<del>- <code>aircraft.regis_no</code> like <code>N[1-9][0-9][0-9][0-9][A-Z]</code> results in <code>USA</code>,</del>
+<del>- <code>aircraft.regis_no</code> like <code>N[1-9][0-9][0-9][A-Z][A-Z]</code> results in <code>USA</code>,</del>
+<del>- <code>NON-US</code> else</del>
+<del>- <code>regis_nos</code> - an array of <code>aircraft.regis_no</code></del></li>
+</ul>
+</li>
+</ul>
+<h5 id="level-1">Level 1</h5>
+<div class="highlight"><pre><span></span><code>                                           CASE WHEN level_1.cictt_codes::text[] = ARRAY[]::text[] THEN (ARRAY[&#39;n/a&#39;])
+                                                                                                   ELSE level_1.cictt_codes      
+                                            END cictt_codes,
+</code></pre></div>
+<ul>
+<li><code>cictt_codes</code> - ARRAY['n/a'] if empty </li>
+<li><code>far_parts</code> - ARRAY['n/a'] if empty </li>
+<li><code>is_dest_country_usa</code> - <code>True</code> if <code>dest_countries</code> contains <code>USA</code></li>
+<li><code>is_dprt_country_usa</code> - <code>True</code> if <code>dprt_countries</code> contains <code>USA</code></li>
+<li><code>is_emergency_landing</code> - <code>True</code> if<ul>
+<li><code>is_atttitude_controllable</code> and<ul>
+<li><code>findings.finding_code</code> in (<code>xxxxxx01</code>, <code>xxxxxx02</code>, <code>xxxxxx03</code>, <code>xxxxxx06</code>, <code>xxxxxx22</code>, <code>xxxxxx23</code>, <code>xxxxxx24</code>, <code>xxxxxx25</code>, <code>xxxxxx26</code>) or</li>
+<li><code>findings.finding_code</code> in (<code>010224xx</code>, <code>010228xx</code>, <code>010230xx</code>, <code>010461xx</code>, <code>010462xx</code>, <code>010465xx</code>, <code>010467xx</code>, <code>010571xx</code>, <code>010572xx</code>, <code>010573xx</code>, <code>010574xx</code>, <code>010578xx</code>, <code>010579xx</code>, <code>010581xx</code>, <code>010585xx</code>, ) or</li>
+<li><code>findings.finding_code</code> in (<code>01050000</code>, <code>01062025</code>, <code>01071000</code>, <code>01071010</code>) or</li>
+<li><code>events_sequence.occurrence_code</code> in (<code>600xxx</code>)</li>
+<li><code>events_sequence.occurrence_code</code> in (<code>xxx133</code>, <code>xxx133</code>, <code>xxx133</code>, <code>xxx133</code>, <code>xxx133</code>, <code>xxx133</code>, <code>xxx133</code>, <code>xxx133</code>, <code>xxx133</code>, <code>xxx133</code>, <code>xxx133</code>, <code>xxx133</code>, <code>xxx133</code>, <code>xxx133</code>, )</li>
+<li><code>events_sequence.occurrence_code</code> in (<code>xxx337</code>, <code>xxx338</code>) and</li>
+<li><code>events_sequence.defining_ev</code> is true </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>is_far_part_091x</code>     - <code>True</code> if <code>far_parts</code> contains at least one of <code>091</code>, <code>091F</code> or <code>091K</code> </li>
+<li><code>is_far_part_121</code>      - <code>True</code> if <code>far_parts</code> contains at least one <code>121</code> </li>
+<li><code>is_far_part_135</code>      - <code>True</code> if <code>far_parts</code> contains at least one <code>135</code> </li>
+<li><code>is_far_part_other</code>    - <code>True</code> if <code>far_parts</code> contains none of  <code>091</code>, <code>091F</code> or <code>091K</code>, <code>121</code>, <code>135</code> </li>
+<li><code>is_oper_country_usa</code>  - <code>True</code> if <code>oper_countries</code> contains <code>USA</code></li>
+<li><code>is_owner_country_usa</code> - <code>True</code> if <code>owner_countries</code> contains <code>USA</code></li>
+<li><code>is_regis_country_usa</code> - <code>True</code> if <code>regis_countries</code> contains <code>USA</code></li>
+<li><code>is_spin_stall</code> - <code>True</code> if<ul>
+<li>(<code>finding_codes</code> contains <code>PARAMS_AoA</code>,                        or</li>
+<li><code>occurrence_codes</code>contains <code>STALL</code>                            or</li>
+<li><code>occurrence_codes</code>contains <code>LOC-I</code> and <code>narr_stall</code>is <code>True</code>) and not</li>
+<li><code>occurrence_codes</code>contains <code>CAA</code> or <code>CFIT</code> </li>
+</ul>
+</li>
+</ul>
+<h5 id="level-2">Level 2</h5>
+<ul>
+<li><code>is_altitude_controllable</code> - <code>True</code> if<ul>
+<li><code>is_atttitude_controllable</code> is <code>True</code> and </li>
+<li><code>is_emergency_landing</code>      is <code>True</code> and not</li>
+<li><code>is_spin_stall</code>             is <code>True</code></li>
+</ul>
+</li>
+<li><code>is_altitude_low</code> - <code>True</code> if<ul>
+<li><code>spin_stall</code> is <code>False</code>                      and </li>
+<li><code>occurrence_codes</code> does not contain <code>MIDAIR</code> and</li>
+<li>(<code>occurrence_codes</code>contains at least one of <ul>
+<li><code>CAA</code>, </li>
+<li><code>CFIT</code>, </li>
+<li><code>ENV_OAS</code>but not <code>BIRD</code>, </li>
+<li><code>ENV_TER</code>,</li>
+<li><code>FINAL_APP</code>,</li>
+<li><code>INIT_CLIMB</code>,</li>
+<li><code>LALT</code>,</li>
+<li><code>MAN_LALT</code>                               or</li>
+</ul>
+</li>
+<li><code>finding_codes</code>contains at least one of<ul>
+<li><code>PARAMS_ALT'</code>,</li>
+<li><code>PARAMS_DEC_APP</code>,</li>
+<li><code>PARAMS_DEC_RATE</code>)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="level-3">Level 3</h5>
+<ul>
+<li><code>is_rss_forced_landing</code> - <code>True</code> if<ul>
+<li><code>is_altitude_controllable</code> is <code>True</code> and </li>
+<li><code>is_emergency_landing</code>     is <code>True</code></li>
+</ul>
+</li>
+<li><code>is_rss_spin_stall_prevention_and_recovery</code> - <code>True</code> if<ul>
+<li><code>is_attitude_controllable</code> is <code>True</code> and </li>
+<li><code>is_spin_stall</code>            is <code>True</code></li>
+</ul>
+</li>
+<li><code>is_rss_terrain_collision_avoidance</code> - <code>True</code> if<ul>
+<li><code>is_altitude_controllable</code> is <code>True</code> and </li>
+<li><code>is_altitude_low</code>          is <code>True</code> and </li>
+<li><code>is_attitude_controllable</code> is <code>True</code></li>
+</ul>
+</li>
+</ul>
+<h5 id="level-4">Level 4</h5>
+<ul>
+<li><code>is_lp_n_a</code> - <code>True</code> if<ul>
+<li><code>is_altitude_low</code>                           is <code>False</code> and </li>
+<li><code>is_attitude_controllable</code>                  is <code>False</code> and </li>
+<li><code>is_emergency_landing</code>                      is <code>False</code> and </li>
+<li><code>is_midair_collision</code>                       is <code>False</code> and </li>
+<li><code>is_pilot_issue</code>                            is <code>False</code> and </li>
+<li><code>is_rss_forced_landing</code>                     is <code>False</code> and </li>
+<li><code>is_rss_spin_stall_prevention_and_recovery</code> is <code>False</code> and </li>
+<li><code>is_rss_terrain_collision_avoidance</code>        is <code>False</code> and </li>
+<li><code>is_spin_stall</code>                             is <code>False</code> </li>
+</ul>
+</li>
+<li><code>is_rss_n_a</code> - <code>True</code> if<ul>
+<li><code>is_midair_collision</code>                       is <code>False</code> and </li>
+<li><code>is_rss_forced_landing</code>                     is <code>False</code> and </li>
+<li><code>is_rss_spin_stall_prevention_and_recovery</code> is <code>False</code> and </li>
+<li><code>is_rss_terrain_collision_avoidance</code>        is <code>False</code> </li>
+</ul>
+</li>
+</ul>
+<h3 id="42-io_lat_long_issues">4.2 <code>io_lat_long_issues</code></h3>
+<p>This view shows the related data from the tables <code>events</code>, <code>io_countries</code>, <code>io_lat_lng</code> and <code>io_states</code> for those events in the USA where either the decimal latitude or longitude is missing from the <strong>NTSB</strong> data.
+Only original data from the relevant tables are shown here.</p>
+<p><kbd><img alt="" src="img/ddl_io_lat_lng_issues.png" /></kbd></p>
+<p>Sample data:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Name                                     |Value            |
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>-----------------------------------------+-----------------+
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>ev_id                                    |20221212106439   |
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>ntsb_no                                  |DCA23LA093       |
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>ev_type                                  |ACC              |
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>ev_year                                  |2022             |
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>country                                  |USA              |
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>state                                    |NJ               |
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>city                                     |Newark           |
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>zip                                      |                 |
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>acft_categories                          |{AIR,AIR}        |
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>cictt_codes                              |{TURB}           |
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>dec_latitude                             |40.700601        |
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>dec_latitude_deviating                   |36.62782322222222|
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>dec_longitude                            |-74.162973       |
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>dec_longitude_deviating                  |66.33325077777778|
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>ev_highest_injury                        |SERS             |
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>far_parts                                |{121,129}        |
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>finding_codes                            |{}               |
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>inj_f_grnd                               |0                |
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>inj_tot_f                                |0                |
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>is_altitude_controllable                 |true             |
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>is_altitude_low                          |false            |
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>is_attitude_controllable                 |true             |
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>is_dest_country_usa                      |false            |
+<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>is_dprt_country_usa                      |false            |
+<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>is_emergency_landing                     |false            |
+<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>is_far_part_091x                         |false            |
+<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>is_far_part_121                          |true             |
+<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>is_far_part_135                          |false            |
+<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>is_far_part_other                        |false            |
+<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>is_invalid_latitude                      |false            |
+<a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a>is_invalid_longitude                     |false            |
+<a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a>is_invalid_us_city                       |false            |
+<a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a>is_invalid_us_city_zipcode               |false            |
+<a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a>is_invalid_us_state                      |false            |
+<a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a>is_invalid_us_zipcode                    |false            |
+<a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a>is_lp_n_a                                |false            |
+<a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a>is_midair_collision                      |false            |
+<a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a>is_narrative_stall                       |false            |
+<a id="__codelineno-8-41" name="__codelineno-8-41" href="#__codelineno-8-41"></a>is_oper_country_usa                      |true             |
+<a id="__codelineno-8-42" name="__codelineno-8-42" href="#__codelineno-8-42"></a>is_owner_country_usa                     |true             |
+<a id="__codelineno-8-43" name="__codelineno-8-43" href="#__codelineno-8-43"></a>is_pilot_issue                           |false            |
+<a id="__codelineno-8-44" name="__codelineno-8-44" href="#__codelineno-8-44"></a>is_regis_country_usa                     |true             |
+<a id="__codelineno-8-45" name="__codelineno-8-45" href="#__codelineno-8-45"></a>is_rss_forced_landing                    |false            |
+<a id="__codelineno-8-46" name="__codelineno-8-46" href="#__codelineno-8-46"></a>is_rss_n_a                               |false            |
+<a id="__codelineno-8-47" name="__codelineno-8-47" href="#__codelineno-8-47"></a>is_rss_spin_stall_prevention_and_recovery|false            |
+<a id="__codelineno-8-48" name="__codelineno-8-48" href="#__codelineno-8-48"></a>is_rss_terrain_collision_avoidance       |true             |
+<a id="__codelineno-8-49" name="__codelineno-8-49" href="#__codelineno-8-49"></a>is_spin_stall                            |false            |
+<a id="__codelineno-8-50" name="__codelineno-8-50" href="#__codelineno-8-50"></a>latlong_acq                              |MEAS             |
+<a id="__codelineno-8-51" name="__codelineno-8-51" href="#__codelineno-8-51"></a>no_aircraft                              |2                |
+<a id="__codelineno-8-52" name="__codelineno-8-52" href="#__codelineno-8-52"></a>occurrence_codes                         |{}               |
+</code></pre></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy;2022-2023, IO-Aero.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["search.highlight", "search.suggest"], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.13.3/dist/mermaid.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="assets/pymdownx-extras/extra-loader-9e2c67b9.js"></script>
+      
+    
+  </body>
+</html>
