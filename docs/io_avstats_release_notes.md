@@ -1,22 +1,16 @@
 # Release Notes
 
-## Version 23.03.01
+## Version 23.03.08
 
-Release Date: 01.03.2023
+Release Date: dd.mm.2023
 
 ### 1. New Features
 
-- bar chart & pie chart: FAR Operations Parts
-- documentation completed
-- entry options for threshold values
-- optional: column sums and / or row sums in all detailed data
-- optional: pie charts with detailed data
-- "Totals Charts": Introducing optional horizontal bar charts.
+- TODO
 
 ### 2. Modified Features
 
-- bar charts & pie charts: always same colors for same categories
-- regrouping of the charts into "Annual Charts" and "Totals Charts".
+- TODO
 
 
 ### 3. Applied Software
