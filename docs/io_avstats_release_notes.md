@@ -6,12 +6,20 @@ Release Date: dd.mm.2023
 
 ### 1. New Features
 
-- TODO
+
+- Database tables:
+    -  io_md_codes_category
+    -  io_md_codes_eventsoe
+    -  io_md_codes_modifier
+    -  io_md_codes_phase
+    -  io_md_codes_section
+    -  io_md_codes_subcategory
+    -  io_md_codes_subsection
 
 ### 2. Modified Features
 
-- TODO
-
+- Materialized view:
+    -  io_app_ae1982
 
 ### 3. Applied Software
 
