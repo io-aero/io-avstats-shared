@@ -21,7 +21,7 @@
         <link rel="next" href="db_sources.html">
       
       <link rel="icon" href="img/IO-Aero_Favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.15">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.1">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.113286f1.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.402914a4.min.css">
       
         
         <link rel="stylesheet" href="assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -89,7 +89,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="index.html" title="IO-AVSTATS - Aviation Event Statistics" class="md-header__button md-logo" aria-label="IO-AVSTATS - Aviation Event Statistics" data-md-component="logo">
       
@@ -326,11 +328,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#version-230301" class="md-nav__link">
-    Version 23.03.01
+  <a href="#version-230308" class="md-nav__link">
+    Version 23.03.08
   </a>
   
-    <nav class="md-nav" aria-label="Version 23.03.01">
+    <nav class="md-nav" aria-label="Version 23.03.08">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -597,11 +599,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#version-230301" class="md-nav__link">
-    Version 23.03.01
+  <a href="#version-230308" class="md-nav__link">
+    Version 23.03.08
   </a>
   
-    <nav class="md-nav" aria-label="Version 23.03.01">
+    <nav class="md-nav" aria-label="Version 23.03.08">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -660,21 +662,27 @@
 
 
 <h1 id="release-notes">Release Notes</h1>
-<h2 id="version-230301">Version 23.03.01</h2>
-<p>Release Date: 01.03.2023</p>
+<h2 id="version-230308">Version 23.03.08</h2>
+<p>Release Date: dd.mm.2023</p>
 <h3 id="1-new-features">1. New Features</h3>
 <ul>
-<li>bar chart &amp; pie chart: FAR Operations Parts</li>
-<li>documentation completed</li>
-<li>entry options for threshold values</li>
-<li>optional: column sums and / or row sums in all detailed data</li>
-<li>optional: pie charts with detailed data</li>
-<li>"Totals Charts": Introducing optional horizontal bar charts.</li>
+<li>Database tables:<ul>
+<li>io_md_codes_category</li>
+<li>io_md_codes_eventsoe</li>
+<li>io_md_codes_modifier</li>
+<li>io_md_codes_phase</li>
+<li>io_md_codes_section</li>
+<li>io_md_codes_subcategory</li>
+<li>io_md_codes_subsection</li>
+</ul>
+</li>
 </ul>
 <h3 id="2-modified-features">2. Modified Features</h3>
 <ul>
-<li>bar charts &amp; pie charts: always same colors for same categories</li>
-<li>regrouping of the charts into "Annual Charts" and "Totals Charts".</li>
+<li>Materialized view:<ul>
+<li>io_app_ae1982</li>
+</ul>
+</li>
 </ul>
 <h3 id="3-applied-software">3. Applied Software</h3>
 <p><strong>Important</strong>: All software components should be installed in the 64 bit version!</p>
@@ -790,7 +798,7 @@
     <script id="__config" type="application/json">{"base": ".", "features": ["search.highlight", "search.suggest"], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      <script src="assets/javascripts/bundle.b78d2936.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@8.13.3/dist/mermaid.min.js"></script>
       
